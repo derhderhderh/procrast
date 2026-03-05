@@ -8,7 +8,7 @@ interface AdBannerProps {
   className?: string
 }
 
-export function AdBanner({ slot = "XXXXXXXXXX", format = "auto", className = "" }: AdBannerProps) {
+export function AdBanner({ slot = "7217705807", format = "auto", className = "" }: AdBannerProps) {
   const adRef = useRef<HTMLDivElement>(null)
   const pushed = useRef(false)
 
@@ -23,22 +23,12 @@ export function AdBanner({ slot = "XXXXXXXXXX", format = "auto", className = "" 
     }
   }, [])
 
-  const publisherId = process.env.NEXT_PUBLIC_ADSENSE_PUBLISHER_ID
-
-  if (!publisherId) {
-    return (
-      <div className={`flex items-center justify-center rounded-lg bg-muted/50 p-4 text-xs text-muted-foreground ${className}`}>
-        Ad Space
-      </div>
-    )
-  }
-
   return (
     <div ref={adRef} className={className}>
       <ins
         className="adsbygoogle"
         style={{ display: "block" }}
-        data-ad-client={publisherId}
+        data-ad-client="ca-pub-2478580166735674"
         data-ad-slot={slot}
         data-ad-format={format}
         data-full-width-responsive="true"
